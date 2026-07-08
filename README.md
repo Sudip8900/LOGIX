@@ -177,16 +177,10 @@ cmake --build .
 
 ---
 
-# License
-
-This project is licensed under the MIT License.
-
----
-
 # Author
 
 Sudip Pan
 
-Electrical & Electronics Engineer
+Electronics & Communication Engineer
 
-Game Engine & Physics Engine Developer
+Game & Physics Engine Developer

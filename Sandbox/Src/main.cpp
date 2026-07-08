@@ -2,6 +2,10 @@
 #include <Logix/Core/Version.h>
 #include <Logix/Core/Types.h>
 
+#include "fmt/compile.h"
+#include "Logix/Core/LogLevel.h"
+#include "Logix/Core/LogMessage.h"
+
 using namespace std;
 
 int main() {
@@ -16,6 +20,14 @@ int main() {
     std::cout<< "Count: " << count << '\n';
     std::cout<<"Gravity: " << gravity << '\n';
     std::cout<<"=====================\n";
+
+    fmt::print("Hello From LOGIX {}\n", Logix::Version::VersionString());
+
+    Logix::LogLevel level = Logix::LogLevel::Error;
+
+    Logix::LogMessage message(Logix::LogLevel::Info, "Physics World Created");
+
+    std::cout<<message.getMessage()<<'\n';
 
     return 0;
 }

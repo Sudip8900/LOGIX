@@ -2,6 +2,9 @@ ADD_LIBRARY(LOGIX STATIC
         Include/Logix/Core/Types.h
         Include/Logix/Core/Logger.h
         Include/Logix/Core/LogLevel.h
+        Include/Logix/Core/LogMessage.h
+        Src/Core/LogMessage.cpp
+        LogSink.h
 )
 
 target_sources(
