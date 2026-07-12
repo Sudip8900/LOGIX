@@ -5,16 +5,19 @@
 #include <Logix/Core/LogLevel.h>
 
 namespace Logix {
-    class LogMessage {
+    class LogMessage
+    {
     public:
         LogMessage(LogLevel level, std::string message);
 
-        [[nodiscard]] LogLevel getLevel() const noexcept;
+        [[nodiscard]]
+        LogLevel GetLevel() const noexcept;
 
-        [[nodiscard]] const std::string& getMessage() const noexcept;
+        [[nodiscard]]
+        const std::string& GetMessage() const noexcept;
 
     private:
-        LogLevel m_Level;
-        std::string m_Message;
+        LogLevel m_level;
+        std::string m_message;
     };
 }

@@ -3,6 +3,7 @@
 #include <Logix/Core/Types.h>
 
 #include "fmt/compile.h"
+#include "Logix/Core/ConsoleSink.h"
 #include "Logix/Core/LogLevel.h"
 #include "Logix/Core/LogMessage.h"
 
@@ -27,7 +28,11 @@ int main() {
 
     Logix::LogMessage message(Logix::LogLevel::Info, "Physics World Created");
 
-    std::cout<<message.getMessage()<<'\n';
+    std::cout<<message.GetMessage()<<'\n';
+
+    Logix::ConsoleSink console;
+
+    console.Write(message);
 
     return 0;
 }

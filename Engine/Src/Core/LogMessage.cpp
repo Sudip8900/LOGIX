@@ -3,15 +3,15 @@
 #include<utility>
 
 namespace Logix {
-    LogMessage::LogMessage(LogLevel level, std::string message):m_Level(level), m_Message(std::move(message)) {
+    LogMessage::LogMessage(LogLevel level, std::string message):m_level(level), m_message(std::move(message)) {
 
     }
 
-    LogLevel LogMessage::getLevel() const noexcept {
-        return m_Level;
+    LogLevel LogMessage::GetLevel() const noexcept {
+        return m_level;
     }
 
-    const std::string& LogMessage::getMessage() const noexcept {
-        return m_Message;
+    const std::string& LogMessage::GetMessage() const noexcept {
+        return m_message;
     }
 }
